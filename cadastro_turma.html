@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+</head>
+
+<style>
+    /* Reset CSS para zerar margens e definir uma fonte padrão */
+    *{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+     body {
+         background-image: url('https://i0.wp.com/www.multarte.com.br/wp-content/uploads/2018/12/fundo-roxo-claro-1024x576.png?resize=696%2C392&ssl=1');
+            font-family: 'Roboto', sans-serif;
+            background-size: cover;
+         
+            background-color: #fff;
+           
+        }
+
+    /* Estilo da barra de navegação */
+    nav {
+        background-color: #240046;
+        box-shadow: 0px 7px 20px #3C096C;
+        overflow: hidden;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.0rem 6rem;
+        text-align: center;
+    }
+
+    /* Estilo do título na barra de navegação */
+    nav h2 {
+        color: #ffffff;
+        /* Texto branco */
+        float: left;
+        /* Alinha o título à esquerda dentro do elemento nav */
+        margin: 0;
+    }
+
+    /* Estilo dos botões na barra de navegação */
+    #login {
+        float: right;
+        /* Alinha os botões à direita dentro do elemento nav */
+        padding: 50px;
+        background-color: #3C096C;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        /* Cor do texto nos botões */
+        border: none;
+        padding: 5px 15px;
+        /* Espaçamento interno dos botões */
+        border-radius: 6px;
+        margin-top: 5px;
+        margin-left: 10px;
+        /* Espaçamento entre os botões */
+        cursor: pointer;
+        /* Altera o cursor para indicar que os botões são clicáveis */
+        text-decoration: none;
+    }
+    #login:hover {
+    background-color: #8763a8;
+}
+
+    table {
+        border-collapse: collapse;
+        width: 75%;
+        /* Aumentando a largura da tabela para 95% */
+        margin: 50px auto;
+        /* Centraliza a tabela na página */
+        font-size: 18px;
+    }
+
+    button {
+        cursor: pointer;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    #excluir {
+        background-color: #5b2a86;
+        color: white;
+        border: none;
+        padding: 7px;
+        border-radius: 6px;
+    }
+
+
+    #visualizar {
+        background-color: #69b578;
+        color: white;
+        border: none;
+        padding: 7px;
+        border-radius: 6px;
+    }
+
+    #sair {
+        color: #22223b;
+        border: none;
+    }
+
+    #style_table th,
+    #style_table td {
+        border: 1px solid gainsboro;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Estilo da div de cadastro */
+    .cadastro {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        /* Alinha os itens verticalmente ao centro */
+        margin-top: 40px;
+        gap: 25px;
+        /* Espaça os itens da div de forma igual*/
+        padding-right: 150px;
+        padding-left: 150px;
+        background-color: #dbd5df;
+    }
+
+
+    .linha {
+        border-top: 2px solid #22223b;
+        width: 100%
+    }
+
+    .sistema {
+        width: 60%;
+        /* Aumentando a largura da tabela */
+        margin: 50px auto;
+        /* Centraliza a tabela na página */
+        ;
+        box-shadow: rgba(155, 155, 173, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        padding: 1px;
+        background-color: #dbd5df;
+        margin-top: 250px;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #dddada;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* CADASTRO TURMA */
+
+    h1,
+    h4 {
+        color: #231942;
+        margin-top: 30px;
+    }
+
+    .login #item {
+        align-items: center;
+    }
+
+    .error-message {
+        color: red;
+    }
+
+    .input-cadastro {
+        display: flex;
+        gap: 40px;
+        /* Espaçamento entre os inputs */
+    }
+
+    .input-turma {
+        flex: 1;
+        /* Ocupa todo o espaço disponível */
+    }
+
+    .input-turma h4 {
+        margin-bottom: 5px;
+        /* Ajuste opcional */
+    }
+
+    .input-turma input {
+        width: 100%;
+        /* Ocupa todo o espaço disponível no input-turma */
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid gainsboro;
+    }
+
+    #cadastro-button {
+        padding: 8px 16px;
+        /* Reduzindo o padding */
+        border-radius: 4px;
+        /* Ajustando o raio da borda */
+        background-color: #3C096C;
+        color: #ffffff;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 50px;
+        height: 35px;
+    }
+    h3{
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <nav>
+        <h2>Olá Professor(a), {nome_professor}</h2>
+        <a href="login" id="login">Sair</a>
+    </nav>
+
+    <div class="sistema">
+
+        <div class="cadastro">
+            <h3>CADASTRE UMA TURMA</h3>
+
+            <div class="linha"></div>
+
+            <div class="acoes">
+                <form action="/cad_turma" method="post">
+                    <div class="input-cadastro">
+                        <div class="input-turma">
+                            <h4>Turma</h4>
+                            <input id="item" type="text" name="turma" placeholder="Insira o nome da turma ">
+                            <input type="hidden" id="id_professor" name="id_professor" value="{id_professor}">
+                            <input type="hidden" id="login" name="login" value="{login}">
+                        </div>
+                        <button id="cadastro-button" type="submit">Cadastrar</button>
+                    </div>
+                    <div class="welcome-message">
+                        <!-- Mensagem de erro será inserida aqui -->
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <table id="style_table">
+            <!-- teste -->
+        </table>
+
+    </div>
+
+</body>
+
+</html>
+
